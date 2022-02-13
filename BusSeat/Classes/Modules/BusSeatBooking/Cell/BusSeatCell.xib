@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BusSeatCell" id="gTV-IL-0wX" customClass="BusSeatCell" customModule="BusSeat" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="271" height="175"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="271" height="175"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seat-empty" translatesAutoresizingMaskIntoConstraints="NO" id="XYq-XA-sfY">
+                        <rect key="frame" x="0.0" y="0.0" width="271" height="175"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="systemGray2Color"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iqC-eJ-nka">
+                        <rect key="frame" x="0.0" y="0.0" width="271" height="175"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyL-0L-Hfw">
+                                <rect key="frame" x="0.0" y="0.0" width="271" height="175"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.26357405250672661" green="0.19451781331204746" blue="0.47254613502738396" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="qyL-0L-Hfw" secondAttribute="trailing" id="EIM-hE-C8j"/>
+                            <constraint firstItem="qyL-0L-Hfw" firstAttribute="leading" secondItem="iqC-eJ-nka" secondAttribute="leading" id="iEc-TK-4wD"/>
+                            <constraint firstAttribute="bottom" secondItem="qyL-0L-Hfw" secondAttribute="bottom" id="iYi-xh-zIU"/>
+                            <constraint firstItem="qyL-0L-Hfw" firstAttribute="top" secondItem="iqC-eJ-nka" secondAttribute="top" id="wdv-zD-pXA"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="iqC-eJ-nka" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="0pb-U6-LQn"/>
+                <constraint firstItem="XYq-XA-sfY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="3KI-Fd-vpz"/>
+                <constraint firstAttribute="trailing" secondItem="XYq-XA-sfY" secondAttribute="trailing" id="AQa-rX-yN8"/>
+                <constraint firstItem="XYq-XA-sfY" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Hxd-ap-t5f"/>
+                <constraint firstAttribute="trailing" secondItem="iqC-eJ-nka" secondAttribute="trailing" id="KPz-nN-lfs"/>
+                <constraint firstItem="iqC-eJ-nka" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="c5E-qT-3ML"/>
+                <constraint firstAttribute="bottom" secondItem="iqC-eJ-nka" secondAttribute="bottom" id="gJH-Wf-H8q"/>
+                <constraint firstAttribute="bottom" secondItem="XYq-XA-sfY" secondAttribute="bottom" id="iAR-Cz-Jr0"/>
+            </constraints>
+            <size key="customSize" width="271" height="175"/>
+            <connections>
+                <outlet property="seatIcon" destination="XYq-XA-sfY" id="TH6-ul-g3O"/>
+                <outlet property="seatNumberLabel" destination="qyL-0L-Hfw" id="Cct-hA-GC7"/>
+            </connections>
+            <point key="canvasLocation" x="297.82608695652175" y="155.69196428571428"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="seat-empty" width="48" height="48"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
